@@ -21,7 +21,7 @@
 
     --general-padding: 1rem;
     --main-side-padding: 4.06rem;
-
+    --general-border-radius: 1.25rem;
 }
 
 /** Base */
@@ -39,6 +39,8 @@ html {
 
 body {
     font-family: var(--body-font);
+    max-width: 1280px;
+    margin: auto;
 }
 
 ul {
@@ -73,7 +75,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 0.625rem;
-    border-radius: 1.25rem;
+    border-radius: var(--general-border-radius);
     border: none;
 }
 
@@ -123,8 +125,6 @@ header {
     gap: 1rem;
 }
 
-
-
 .header__btn {
     font-size: 1.25rem;
     padding: 0.7rem 1.25rem;
@@ -133,4 +133,49 @@ header {
 .header__shopping-cart {
     font-size: 1.75rem;
     font-weight: var(--font-weight-normal);
+}
+
+.hero__container{
+    position: relative;
+    display: flex;
+    height: 23.25rem;
+    background-color: var(--banner-bg-color);
+    border-radius: var(--general-border-radius);
+}
+
+.hero__container > img {
+    position: absolute;
+}
+
+.hero__text-container{
+    margin: 3.44rem 4.06rem;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: var(--font-weight-strong);
+}
+
+.hero__sub-title {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-normal);
+}
+
+.hero__caption {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+}
+
+.hero__salad-img {
+    height: 27.44rem;
+    width: 45.63rem;
+    bottom: -5rem;
+    right: -4rem;
+}
+
+.hero__tomato-img {
+    width: 11.3rem;
+    height: 7.7rem;
+    bottom: 1.2rem;
+    right: 27rem;
 }
