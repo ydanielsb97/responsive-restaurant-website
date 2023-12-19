@@ -5,6 +5,7 @@
     /** Generic */
     --primary-color: #4E944F;
     --secondary-color: #83BD75;
+    --terciary-color: #4E944F33; /*Opacity: 20%*/
     --danger-color: #C84B31;
     --light-color: #fff;
     --yellow-color: #E7B10A;
@@ -42,10 +43,15 @@ html {
 
 body {
     font-family: var(--body-font);
-    max-width: 1280px;
+    /* max-width: 1280px; */
     margin: auto;
 }
 
+header,
+main{
+    max-width: 1280px;
+    margin: auto;
+}
 ul {
     list-style: none;
 }
@@ -78,6 +84,10 @@ button{
     cursor: pointer;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 /** Reusable styles */
 
 .btn {
@@ -108,6 +118,15 @@ button{
     background-color: var(--gray-bg-color);
     color: var(--gray-text-color);
     transition: background-color .5s, color .5s;
+}
+
+.banner-container{
+    position: relative;
+    display: flex;
+    height: 23.25rem;
+    background-color: var(--banner-bg-color);
+    border-radius: var(--general-border-radius);
+
 }
 
 /** ================================================ */
@@ -171,14 +190,6 @@ header {
 
 /** HERO */
 
-.hero__container{
-    position: relative;
-    display: flex;
-    height: 23.25rem;
-    background-color: var(--banner-bg-color);
-    border-radius: var(--general-border-radius);
-}
-
 .hero__container > img {
     position: absolute;
 }
@@ -223,7 +234,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 10rem;
 }
 
 .popular-foods__title{
@@ -360,7 +371,7 @@ header {
 /** REVIEWS */
 
 .feedbacks{
-    margin-top: 5.81rem;
+    margin-top: 10rem;
     width: 100%;
     height: 29.6875rem;
     display: flex;
@@ -445,3 +456,135 @@ header {
     height: 2rem;
     width: 2rem;
 }
+
+/* Newsletter */
+
+.newsletter{
+    margin-top: 10rem;
+    position: relative;
+}
+
+.newsletter__title-caption-container{
+    max-width: 34rem;
+}
+
+.newsletter__text-container{
+    margin: 3.44rem 4.06rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.94rem;
+    justify-content: center;
+    
+}
+
+.newsletter__title{
+    font-size: 2rem;
+    font-weight: var(--font-weight-strong);
+
+}
+
+.newsletter__caption{
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    color: var(--gray-text-color);
+}
+
+.newsletter__email-group-input{
+    position: relative;
+    width: 24.1875rem;
+}
+
+.newsletter__input{
+    width: 24.1875rem;
+    height: 4.1875rem;
+    border-radius: 1.25rem;
+    background: var(--white, #FFF);
+    border-style: none;
+    padding-left: 3rem;
+    padding-right: 8rem;
+}
+
+.newsletter__email-icon{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.30rem;
+    left: 1rem;
+}
+
+
+.newsletter__input::placeholder{
+    color: var(--gray-text-color);
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+}
+
+.newsletter__subscribe-btn{
+    font-size: 1rem;
+    font-weight: var(--font-weight-strong);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.newsletter__side-img{
+    position: absolute;
+    top: -6rem;
+    right: 1rem;
+    max-width: 400px;
+
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--terciary-color, 20%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10rem;
+    
+}
+
+
+.footer__company-info{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footer__company-logo{
+    width: 10rem;
+}
+
+.footer__company-address{
+    color: var(--gray-text-color);
+}
+
+.ri-facebook-line,
+.ri-instagram-line,
+.ri-linkedin-line{
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.footer__links{
+    display: flex;
+    gap: 6rem;
+    padding: 5rem;
+}
+
+
+
+.footer__info-links{
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footer__links-title{
+    font-weight: var(--font-weight-strong);
+}
+
+
